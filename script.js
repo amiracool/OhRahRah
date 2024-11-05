@@ -64,3 +64,27 @@ document.addEventListener("DOMContentLoaded", () => {
     videoObserver.observe(heroVideo);
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const starryBackground = document.getElementById("starry-background");
+    const numStars = 100; // Adjust for more or fewer stars
+
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+        // Random positioning within the viewport
+        star.style.left = `${Math.random() * 100}vw`;
+        star.style.top = `${Math.random() * 100}vh`;
+        starryBackground.appendChild(star);
+    }
+
+    // Optional: Adding some shooting stars
+    const numShootingStars = 5; // Adjust for more or fewer shooting stars
+    for (let i = 0; i < numShootingStars; i++) {
+        const shootingStar = document.createElement("div");
+        shootingStar.classList.add("star", "shooting-star");
+        shootingStar.style.left = `${Math.random() * 100}vw`;
+        shootingStar.style.top = `${Math.random() * 100}vh`;
+        shootingStar.style.setProperty('--i', i); // For animation delay
+        starryBackground.appendChild(shootingStar);
+    }
+});

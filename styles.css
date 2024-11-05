@@ -10,6 +10,7 @@ body {
     color: #333;
     overflow-x: hidden;
     background-color: #ffffff;
+    font-size: large;
 }
 
 /* Header */
@@ -34,7 +35,9 @@ body {
 .header .nav-links li {
     margin-left: 20px;
 }
-
+.header p{
+    font-size: x-large;
+}
 .header .nav-links a {
     color: #ffffff;
     text-decoration: none;
@@ -1091,6 +1094,7 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 20px;
     font-family: "Fredoka", sans-serif;
 }
 
@@ -1261,33 +1265,44 @@ body {
     50% { transform: scale(1.05); }
 }
 
-/* Social Icon Styling */
-.social-icons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
 .social-icons a {
-    color: #5d70e6; /* Your branding color */
-    font-size: 1.5rem;
+    color: #ffffff; /* Set to white or any contrasting color */
+    font-size: 1.5rem; /* Adjust size as needed */
+    margin:  10px;
+    margin-left: 60px;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #9a67ea; /* Hover effect */
+    color: #ffc107; /* Change to your branding color on hover */
 }
 
-/* Position in header */
-header .social-icons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-/* Position in footer */
-footer .social-icons {
+/* Quick Links styling */
+.quick-links {
     margin-top: 20px;
-    text-align: center;
 }
 
+.quick-links h4 {
+    color:white
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links ul li {
+    margin-bottom: 5px;
+}
+
+.quick-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.quick-links ul li a:hover {
+    color: #ffc107; /* Yellow on hover */
+}
