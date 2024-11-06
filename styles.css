@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body, * {
+    cursor: none !important;
+}
 body {
     font-family: 'Fredoka', sans-serif;
     color: #333;
@@ -12,6 +14,21 @@ body {
     background-color: #ffffff;
     font-size: large;
 }
+/* Custom Cursor Styling */
+.custom-cursor {
+    position: fixed;
+    width: 40px; /* Adjust size as desired */
+    height: 40px;
+    background-image: url('images/woof.png'); /* Ensure the path to woof.png is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    pointer-events: none; /* Makes sure it doesn’t interfere with clicks */
+    transform: translate(-50%, -50%); /* Center cursor */
+    z-index: 9999;
+    display: none; /* Hidden until mouse moves */
+}
+
 
 /* Header */
 .header {
@@ -1305,4 +1322,106 @@ body {
 
 .quick-links ul li a:hover {
     color: #ffc107; /* Yellow on hover */
+}
+
+/* For large desktop screens (1200px and up) */
+@media (min-width: 1200px) {
+    .hero1 h1 {
+        font-size: 3rem;
+    }
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+}
+
+/* For desktops and laptops (992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header {
+        padding: 20px 30px;
+    }
+    .hero1 h1 {
+        font-size: 2.5rem;
+    }
+    .about-wrapper, .meet-the-groomer, .hero2, .testimonials {
+        max-width: 1000px;
+    }
+}
+
+/* For tablets and smaller desktops (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero1 {
+        height: 70vh;
+        background-position: center;
+    }
+    .hero1 h1 {
+        font-size: 2rem;
+    }
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .about-content ul {
+        text-align: left;
+    }
+    .hero-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* For larger mobile screens (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    .hero1 {
+        height: 50vh;
+    }
+    .hero1 h1 {
+        font-size: 1.8rem;
+    }
+    .cta-banner h2, .cta-banner p {
+        font-size: 1.2rem;
+    }
+    .hero-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For small mobile screens (480px and below) */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header .logo {
+        width: 60px;
+    }
+    .hero1 h1 {
+        font-size: 1.5rem;
+    }
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    .about-wrapper, .meet-the-groomer, .hero2, .testimonials, .FAQ {
+        padding: 20px;
+    }
+    .hero2, .testimonials, .cta-banner {
+        flex-direction: column;
+    }
+    .social-icons {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .quick-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

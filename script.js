@@ -88,3 +88,42 @@ document.addEventListener("DOMContentLoaded", function() {
         starryBackground.appendChild(shootingStar);
     }
 });
+
+// Create and set up the custom cursor element
+const customCursor = document.createElement('div');
+customCursor.classList.add('custom-cursor');
+document.body.appendChild(customCursor);
+
+// Update cursor position based on mouse movement
+document.addEventListener('mousemove', (e) => {
+    customCursor.style.left = `${e.clientX}px`;
+    customCursor.style.top = `${e.clientY}px`;
+    customCursor.style.display = 'block'; // Ensures it shows up when moving
+});
+
+// Optional: Hide custom cursor when the mouse leaves the viewport
+document.addEventListener('mouseleave', () => {
+    customCursor.style.display = 'none';
+});
+
+document.addEventListener('mouseenter', () => {
+    customCursor.style.display = 'block';
+});
+
+// Declare woofSound only if it's not already declared
+if (typeof woofSound === 'undefined') {
+    var woofSound = new Audio('images/woof.mp3');
+}
+
+// Function to play the woof sound
+function playWoofSound() {
+    woofSound.currentTime = 0; // Reset to start of the audio file
+    woofSound.play().catch(error => console.log('Sound playback failed:', error));
+}
+
+// Add a click event listener to the entire document
+document.addEventListener('click', playWoofSound);
+
+
+
+
