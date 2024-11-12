@@ -21,17 +21,14 @@
         <img src="images/dog.png" alt="OhRahRah Logo" class="logo">
        <h1>OhRahRah</h1>
        <p>Exclusive Dog Grooming Birmingham</p>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about" class="clickable">About</a></li>
-                <li><a href="#gallery" class="clickable">Pawfolio</a></li>
-                <li><a href="#Dlog" class="clickable">Dlog</a></li>
-                <li><a href="#contact"class="clickable">Contact</a></li>
-            </ul>
-        
-    
-            
-        </nav>
+       <nav>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="pawfolio.html">Pawfolio</a></li>
+            <li><a href="Dlog.html">Dlog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     </header>
 
     <!-- First Hero Section -->
@@ -41,7 +38,7 @@
         <div class="cta-content">
             <h2>Pamper Your Pup with OhRahRah</h2>
             <p>Book a luxurious grooming session today and give your dog the royal treatment!</p>
-            <a href="#contact" class="cta-button" class="clickable">Book Now</a>
+            <a href="contact.html" class="cta-button" class="clickable">Book Now</a>
         </div>
     </section>
     
@@ -58,7 +55,7 @@
                     <li>A tailored approach for every pup’s needs and comfort</li>
                     <li>Top-quality products and gentle techniques for a stress-free experience</li>
                 </ul>
-                <img src="images/queen.png" alt="Arissa the Bichon" class="about-image">
+                
                 <br>
                 <p>At OhRahRah, grooming is more than just a service—it’s a bond of trust and care. I’m here to make sure your furry friend leaves looking and feeling their absolute best!</p>
                 <a href="#contact" class="learn-more">Learn More</a>
@@ -202,7 +199,14 @@
             </div>
         </section>
         
-        
+        <section class="subscription-bar">
+            <h3>Your Pup Called!</h3>
+            <p>They want you to subscribe!</p>
+            <form action="your_subscription_handler.php" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
         
         
         <!-- Footer -->
@@ -211,21 +215,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <!-- Footer Section -->
-<footer class="footer">
-    <p>© 2024 OhRahRah Pet Care Services. All Rights Reserved.</p>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/yourprofile" target="_blank" class="clickable" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@yourprofile" target="_blank" class="clickable" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/yourprofile" target="_blank" class="clickable" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    </div>
-    <div class="quick-links">
-        <h4>Quick Links</h4>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
+    <p style="margin: 0;">© 2024 OhRahRah Pet Care Services. All Rights Reserved.</p>
+    <div style="margin-top: 10px;">
+        <a href="https://www.instagram.com/ohrahrah_petservices/" style="color: white; margin: 0 10px;" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@ohrahrah.pet.serv" style="color: white; margin: 0 10px;" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/people/Ohrahrah-Pet-Services/61562546376801/" style="color: white; margin: 0 10px;" target="_blank"><i class="fab fa-facebook-f"></i></a>
     </div>
 </footer>
     <script src="script.js"></script>
