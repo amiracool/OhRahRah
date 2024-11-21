@@ -4,59 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | OhRahRah Exclusive Dog Grooming</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="exclusive-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantora+One&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/893913f5b7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<!-- Custom cursor container -->
-<div class="cursor"></div>
 </head>
-</head>
-<body>
+<body class="orr-body">
 
 <!-- Header with Navigation -->
-<header class="header">
-    <header class="header">
-        <a href="index.html">
-            <img src="images/dog.png" alt="OhRahRah Logo" class="logo">
-          </a>
-   <h1>OhRahRah</h1>
-   <p>Exclusive Dog Grooming Birmingham</p>
-   <nav>
-    <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="pawfolio.html">Pawfolio</a></li>
-        <li><a href="Dlog.html">Dlog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+<header class="orr-header">
+    <a href="index.html">
+        <img src="images/dog.png" alt="OhRahRah Logo" class="orr-logo">
+    </a>
+    <h1 class="orr-title">OhRahRah</h1>
+    <p class="orr-subtitle">Exclusive Dog Grooming Birmingham</p>
+    <nav>
+        <ul class="orr-nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="pawfolio.html">Pawfolio</a></li>
+            <li><a href="Dlog.html">Dlog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
+
 <!-- Contact Section -->
-<section class="contact-hero">
-    <h2>Get in Touch</h2>
-    <p>We’d love to hear from you! Whether it’s a question, feedback, or booking request, reach out using the form below.</p>
-</section>
 
-<<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeS53tmyprqx3Zu8qfYzurcDtotK4UWRm9qrUex9C5oivg8ww/viewform?embedded=true" width="640" height="1066" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
+<section class="orr-contact-form-section">
+    <h2 class="orr-contact-form-title">Send Us a Message</h2>
+    <p class="orr-contact-form-description">We’d love to hear from you! Please use the form below to get in touch.</p>
+    <form action="https://formspree.io/f/xjkvolkj" method="POST" class="orr-contact-form">
+      <label>
+        Your Email:
+        <input type="email" name="email" required class="orr-input">
+      </label>
+      <label>
+        Your Message:
+        <textarea name="message" required class="orr-textarea"></textarea>
+      </label>
+      <button type="submit" class="orr-submit-button">Send</button>
+    </form>
+  </section>
+  
 <!-- Optional Map Section -->
-<section class="map">
-    <h3>Find Us Here</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.5484629677094!2d-1.875380059312624!3d52.432978770580704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bbfde10250d9%3A0xee171318c284540b!2sVimy%20Rd%2C%20Birmingham%20B13%200UA!5e0!3m2!1sen!2suk!4v1731374785033!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<section class="orr-map">
+    <h3 class="orr-map-title">Find Us Here</h3>
+    <iframe src="https://www.google.com/maps/embed?..."></iframe>
 </section>
 
 <!-- Footer -->
-<footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
-    <p style="margin: 0;">© 2024 OhRahRah Pet Care Services. All Rights Reserved.</p>
-    <div style="margin-top: 10px;">
-        <a href="https://www.instagram.com/ohrahrah_petservices/" style="color: white; margin: 0 10px;" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@ohrahrah.pet.serv" style="color: white; margin: 0 10px;" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/people/Ohrahrah-Pet-Services/61562546376801/" style="color: white; margin: 0 10px;" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<footer class="orr-footer">
+    <p>© 2024 OhRahRah Pet Care Services. All Rights Reserved.</p>
+    <div class="orr-social-links">
+        <a href="https://www.instagram.com/ohrahrah_petservices/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@ohrahrah.pet.serv" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/people/Ohrahrah-Pet-Services/61562546376801/" target="_blank"><i class="fab fa-facebook-f"></i></a>
     </div>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
