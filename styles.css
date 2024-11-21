@@ -688,6 +688,101 @@ body {
     margin: 20px auto;
     position: relative;
 }
+/* Hero Section */
+/* Hero Section */
+.herocta-banner {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure no unwanted overflow */
+  }
+  
+  .herocta-banner video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .herocta-content {
+    position: absolute;
+    top: 50%; /* Vertically centered */
+    left: 50%; /* Horizontally centered */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Optional background for better contrast */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%; /* Prevent text from stretching too wide */
+    z-index: 10; /* Ensure it sits above the video */
+    visibility: visible; /* Ensure content is visible */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .herocta-content {
+      position: static;
+      transform: translateY(-10px);
+      margin-top: 15px; /* Space below the video */
+      margin-left: 20px;
+      background: none; /* Remove background for simplicity */
+      padding: 0;
+      z-index: 10; /* Ensure text is still on top */
+      color: #5d70e6;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .herocta-content {
+      margin-top: 10px;
+      padding: 5px;
+    }
+  
+    .herocta-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .herocta-content p {
+      font-size: 1rem;
+    }
+  
+    .herocta-button {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  .herocta-button {
+    background-color: #5d70e6; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 12px 20px; /* Add padding for size */
+    font-size: 1rem; /* Standard readable font size */
+    border-radius: 30px; /* Fully rounded edges */
+    cursor: pointer; /* Pointer cursor for hover effect */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; 
+    margin-top: 20px;/* Ensures proper sizing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    text-transform: uppercase; /* Capitalize text */
+  }
+  
+  /* Hover Effect */
+  .herocta-button:hover {
+    background-color: #4b5fc1; /* Slightly darker shade on hover */
+    transform: translateY(-2px); /* Lift the button slightly */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+  }
+  
+  /* Focus Effect */
+  .herocta-button:focus {
+    outline: 2px solid #ffffff; /* Focus outline for accessibility */
+    outline-offset: 4px; /* Space between button and focus outline */
+  }
+  
+  
 /* CTA Banner Section */
 /* CTA Banner */
 .cta-banner {
@@ -1502,3 +1597,59 @@ body {
         font-size: 1rem;
     }
 }
+/* For the hero section */
+.cta-banner {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-banner video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .cta-content {
+    position: absolute;
+    top: 40%; /* Adjusted to bring text higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .cta-content {
+      position: static;
+      transform: none;
+      margin-top: 10px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta-content {
+      margin-top: 5px;
+      padding: 5px;
+    }
+  
+    .cta-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .cta-content p {
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+  }
+  background-color: #f7f7ff; /* Light lavender or grey */
+
+  
