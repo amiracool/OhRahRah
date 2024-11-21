@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (form) {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
-            alert('Thank you for subscribing!');
+            alert('Thank you! Woof!');
             form.reset();
         });
     }
