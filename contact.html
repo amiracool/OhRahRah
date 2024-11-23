@@ -30,23 +30,22 @@
 </header>
 
 <!-- Contact Section -->
-
 <section class="orr-contact-form-section">
     <h2 class="orr-contact-form-title">Send Us a Message</h2>
     <p class="orr-contact-form-description">We’d love to hear from you! Please use the form below to get in touch.</p>
-    <form action="https://formspree.io/f/xjkvolkj" method="POST" class="orr-contact-form">
-      <label>
-        Your Email:
-        <input type="email" name="email" required class="orr-input">
-      </label>
-      <label>
-        Your Message:
-        <textarea name="message" required class="orr-textarea"></textarea>
-      </label>
-      <button type="submit" class="orr-submit-button">Send</button>
+    <form id="orr-contact-form" class="orr-contact-form">
+        <label for="orr-email">
+            Your Email:
+            <input type="email" id="orr-email" name="email" required class="orr-input">
+        </label>
+        <label for="orr-message">
+            Your Message:
+            <textarea id="orr-message" name="message" required class="orr-textarea"></textarea>
+        </label>
+        <button type="submit" class="orr-submit-button">Send</button>
     </form>
-  </section>
-  
+</section>
+
 <!-- Optional Map Section -->
 <section class="orr-map">
     <h3 class="orr-map-title">Find Us Here</h3>
@@ -63,6 +62,37 @@
     </div>
 </footer>
 
+<!-- JavaScript to handle form submission -->
+<script>
+  document.getElementById('orr-contact-form').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the form from refreshing the page
+
+    // Collect the form data
+    const formData = {
+      email: document.getElementById('orr-email').value,
+      message: document.getElementById('orr-message').value,
+    };
+
+    try {
+      // Send data to the backend
+      const response = await fetch('http://localhost:3000/submit', { // Replace with your deployed backend URL when live
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        alert(result.message || 'Your message was sent successfully!');
+        document.getElementById('orr-contact-form').reset(); // Clear the form
+      } else {
+        alert(result.error || 'Something went wrong. Please try again!');
+      }
+    } catch (error) {
+      alert('Error connecting to the server. Please try again later.');
+    }
+  });
+</script>
 <script src="script.js"></script>
 </body>
 </html>
