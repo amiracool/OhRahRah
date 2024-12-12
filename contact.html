@@ -4,80 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | OhRahRah Exclusive Dog Grooming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="exclusive-styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cantora+One&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap">
     <script src="https://kit.fontawesome.com/893913f5b7.js" crossorigin="anonymous"></script>
 </head>
-<body class="orr-body">
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html">
+            <img src="images/dog.png" alt="OhRahRah Logo" class="logo">
+        </a>
+        <h1>OhRahRah</h1>
+        <p>Exclusive Dog Grooming Birmingham</p>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="pawfolio.html">Pawfolio</a></li>
+                <li><a href="Dlog.html">Dlog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Header with Navigation -->
-<header class="orr-header">
-    <a href="index.html">
-        <img src="images/dog.png" alt="OhRahRah Logo" class="orr-logo">
-    </a>
-    <h1 class="orr-title">OhRahRah</h1>
-    <p class="orr-subtitle">Exclusive Dog Grooming Birmingham</p>
-    <nav>
-        <ul class="orr-nav-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="pawfolio.html">Pawfolio</a></li>
-            <li><a href="Dlog.html">Dlog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Contact Section -->
+    <section class="orr-contact-section">
+        <h2 class="orr-contact-title">Contact Us</h2>
+        <p class="orr-contact-description">Let us know how we can help your furry friend!</p>
 
-<!-- Contact Section -->
-<section class="orr-contact-form-section">
-    <h2 class="orr-contact-form-title">Send Us a Message</h2>
-    <p class="orr-contact-form-description">We’d love to hear from you! Please use the form below to get in touch.</p>
-    <form id="orr-contact-form" class="orr-contact-form" action="https://getform.io/f/bqooeggb" method="POST">
-        <label for="orr-name">
-            Your Name:
-            <input type="text" id="orr-name" name="name" required class="orr-input">
-        </label>
-        <label for="orr-phone">
-            Phone Number:
-            <input type="tel" id="orr-phone" name="phone" required class="orr-input">
-        </label>
-        <label for="orr-postcode">
-            Postcode:
-            <input type="text" id="orr-postcode" name="postcode" required class="orr-input">
-        </label>
-        <label for="orr-email">
-            Your Email:
-            <input type="email" id="orr-email" name="email" required class="orr-input">
-        </label>
-        <label for="orr-message">
-            Your Message:
-            <textarea id="orr-message" name="message" required class="orr-textarea"></textarea>
-        </label>
+        <div class="contact-buttons">
+            <button class="contact-btn" onclick="callNow()" data-action="Call">
+                <i class="fas fa-phone-alt"></i> Call Us
+            </button>
+            <button class="contact-btn" onclick="textNow()" data-action="Text">
+                <i class="fas fa-sms"></i> Text Us
+            </button>
+            <button class="contact-btn" onclick="emailNow()" data-action="Email">
+                <i class="fas fa-envelope"></i> Email Us
+            </button>
+            <button class="contact-btn" onclick="videoCall()" data-action="Video Call">
+                <i class="fas fa-video"></i> Video Call
+            </button>
+        </div>
 
-        <!-- Honeypot Field (Hidden) -->
-        <input type="text" name="_honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+        <!-- Video Section -->
+        <div class="video-container">
+            <video autoplay muted loop playsinline class="promo-video">
+                <source src="images/What are you waiting for.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+                <h3>What are you waiting for?</h3>
+            </div>
+        </div>
+    </section>
 
-        <!-- Hidden Fields for Metadata -->
-        <input type="hidden" name="_subject" value="New Contact Form Submission from OhRahRah">
+    <!-- Footer -->
+    <footer class="orr-footer">
+        <p>© 2024 OhRahRah Pet Care Services. All Rights Reserved.</p>
+    </footer>
 
-        <button type="submit" class="orr-submit-button">Send</button>
-    </form>
-</section>
+    <script>
+        function callNow() {
+            window.location.href = "tel:+447889263789";
+        }
 
-<!-- Footer -->
-<footer class="orr-footer">
-    <p>© 2024 OhRahRah Pet Care Services. All Rights Reserved.</p>
-    <div class="orr-social-links">
-        <a href="https://www.instagram.com/ohrahrah_petservices/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@ohrahrah.pet.serv" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/people/Ohrahrah-Pet-Services/61562546376801/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    </div>
-</footer>
-<script src="script.js"></script>
+        function textNow() {
+            window.location.href = "sms:+447889263789";
+        }
+
+        function emailNow() {
+            window.location.href = "mailto:bookings@ohrahrah.co.uk";
+        }
+
+        function videoCall() {
+            window.open("https://calendly.com/bookings-ohrahrah/30min", "_blank");
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
