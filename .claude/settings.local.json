@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(del \"c:\\Users\\amira\\OneDrive\\Documents\\GitHub\\OhRahRah\\article2.html\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

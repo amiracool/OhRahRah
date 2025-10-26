@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://amiracool.github.io/OhRahRah/sitemap.xml
+
+# Disallow crawling of scripts and styles (optional, improves crawl efficiency)
+Allow: /images/
+Allow: /*.css
+Allow: /*.js
