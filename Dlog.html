@@ -19,61 +19,119 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
+    <style>
+        /* Responsive 4-column grid for Dlog articles */
+        @media (max-width: 1200px) {
+            .articles-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .articles-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <!-- Header with Navigation -->
-<header class="header">
+<header class="header" style="background: linear-gradient(135deg, #5d70e6 0%, #7b8df5 100%); box-shadow: 0 4px 15px rgba(93, 112, 230, 0.3); border-radius: 0 0 20px 20px;">
     <a href="index.html">
-        <img src="images/dog.png" alt="OhRahRah Logo" class="logo">
+        <img src="images/dog.png" alt="OhRahRah Logo" class="logo" style="filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));">
       </a>
-   <h1>OhRahRah</h1>
-   <p>Exclusive Pet Services Birmingham</p>
+   <h1 style="font-weight: 700; letter-spacing: 1px;">OhRahRah</h1>
+   <p style="font-size: x-large; font-weight: 500;">Exclusive Pet Services Birmingham</p>
    <nav>
     <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="pawfolio.html">Pawfolio</a></li>
-        <li><a href="Dlog.html">Dlog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html" style="font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s;">About</a></li>
+        <li><a href="pawfolio.html" style="font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s;">Pawfolio</a></li>
+        <li><a href="Dlog.html" style="font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s;">Dlog</a></li>
+        <li><a href="contact.html" style="font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: all 0.3s;">Contact</a></li>
     </ul>
 </nav>
 </header>
 
 <!-- Blog Hero Section -->
-<section class="blog-hero">
-    <h2>Welcome to the Dlog</h2>
-    <p>Your go-to place for pet care tips, grooming insights, and OhRahRah updates!</p>
+<section class="pawfolio-hero" style="background-color: #5d70e6; color: #ffffff; text-align: center; padding: 40px 20px;">
+    <h2 style="font-size: 2em; margin-bottom: 10px;">Welcome to the Dlog</h2>
+    <p style="font-size: 1.2em; margin-top: 10px;">Your go-to place for pet care tips, grooming insights, and OhRahRah updates!</p>
 </section>
 
-<!-- Articles Section -->
+<!-- All Articles Section - 4x4 Grid -->
 <section class="featured-articles">
-    <h3>Articles</h3>
-    <div class="articles-grid">
-        <article class="article">
-            <img src="images/photoroom1.png" alt="Article 1">
-            <h4>5 Essential Grooming Tips for a Healthy Coat</h4>
-            <p>Learn how to keep your dog's coat healthy and shiny with these essential grooming tips.</p>
-            <a href="article1.html" class="read-more">Read More</a>
-        </article>
-        <article class="article">
-            <img src="images/photoroom2.png" alt="Article 2">
-            <h4>Understanding Your Dog's Grooming Needs</h4>
-            <p>Every dog is unique! Find out how to tailor grooming to your pup's specific needs.</p>
-            <a href="article2.html" class="read-more">Read More</a>
-        </article>
+    <div class="articles-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1400px; margin: 0 auto;">
+        <a href="article1.html" style="text-decoration: none; color: inherit; display: block;">
+            <article class="article" style="cursor: pointer; transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/photoroom1.png" alt="Dog grooming tips Birmingham - healthy coat maintenance">
+                <h4>5 Essential Grooming Tips for a Healthy Coat</h4>
+                <p>Learn how to keep your dog's coat healthy and shiny with these essential grooming tips.</p>
+                <span class="read-more">Read More</span>
+            </article>
+        </a>
+        <a href="article2.html" style="text-decoration: none; color: inherit; display: block;">
+            <article class="article" style="cursor: pointer; transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/photoroom2.png" alt="Understanding dog grooming needs Birmingham - breed-specific care">
+                <h4>Understanding Your Dog's Grooming Needs</h4>
+                <p>Every dog is unique! Find out how to tailor grooming to your pup's specific needs.</p>
+                <span class="read-more">Read More</span>
+            </article>
+        </a>
+        <a href="post1.html" style="text-decoration: none; color: inherit; display: block;">
+            <article class="article" style="cursor: pointer; transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/photoroom3.png" alt="Benefits of regular dog grooming Birmingham">
+                <h4>The Benefits of Regular Dog Grooming</h4>
+                <p>Discover why regular grooming is essential for your dog's health, happiness, and overall wellbeing.</p>
+                <span class="read-more">Read More</span>
+            </article>
+        </a>
+        <a href="post2.html" style="text-decoration: none; color: inherit; display: block;">
+            <article class="article" style="cursor: pointer; transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/photoroom4.png" alt="Keeping dogs calm during grooming Birmingham">
+                <h4>How to Keep Your Dog Calm During Grooming</h4>
+                <p>Learn proven techniques to help your anxious pup relax during grooming sessions.</p>
+                <span class="read-more">Read More</span>
+            </article>
+        </a>
+        <a href="post3.html" style="text-decoration: none; color: inherit; display: block;">
+            <article class="article" style="cursor: pointer; transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/phtoroom5.png" alt="Best dog grooming products Birmingham">
+                <h4>Top 10 Grooming Products We Love</h4>
+                <p>Our favorite professional grooming tools and products that we use and recommend.</p>
+                <span class="read-more">Read More</span>
+            </article>
+        </a>
+        <a href="post4.html" style="text-decoration: none; color: inherit; display: block;">
+            <article class="article" style="cursor: pointer; transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/photoroom6.png" alt="One-on-one dog grooming Birmingham benefits">
+                <h4>Why Choose One-on-One Grooming?</h4>
+                <p>Discover the benefits of personalized, one-on-one grooming for your beloved pet.</p>
+                <span class="read-more">Read More</span>
+            </article>
+        </a>
+        <a href="post5.html" style="text-decoration: none; color: inherit; display: block;">
+            <article class="article" style="cursor: pointer; transition: transform 0.2s; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <img src="images/photoroom7.png" alt="Dog teeth brushing importance Birmingham">
+                <h4>Why Brushing Your Dog's Teeth is Very Important</h4>
+                <p>Learn about dental health and why regular teeth brushing is crucial for your dog.</p>
+                <span class="read-more">Read More</span>
+            </article>
+        </a>
+        <div style="text-decoration: none; color: inherit; display: block;">
+            <article class="article" style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); border: 2px dashed #5d70e6; min-height: 350px;">
+                <div style="text-align: center; padding: 20px;">
+                    <h4 style="font-size: 2.5em; margin-bottom: 10px; color: #5d70e6;">🐾</h4>
+                    <h4 style="color: #5d70e6; font-size: 1.5em; margin-bottom: 10px;">Coming Soon</h4>
+                    <p style="color: #666; font-size: 1em;">More grooming tips and pet care insights on the way!</p>
+                </div>
+            </article>
+        </div>
     </div>
-</section>
-
-<!-- Recent Posts Section -->
-<section class="recent-posts">
-    <h3>Recent Posts</h3>
-    <ul class="post-list">
-        <li><a href="post1.html">The Benefits of Regular Dog Grooming</a></li>
-        <li><a href="post2.html">How to Keep Your Dog Calm During Grooming</a></li>
-        <li><a href="post3.html">Top 10 Grooming Products We Love</a></li>
-        <li><a href="post4.html">Why Choose One-on-One Grooming?</a></li>
-        <li><a href="post5.html">Why Brushing Your Dog's Teeth is Very Important</a></li>
-    </ul>
 </section>
 
 <footer style="background-color: #333; color: white; padding: 20px; text-align: center;">
@@ -84,13 +142,11 @@
         <a href="https://www.rover.com/members/amira-h-welcome-to-our-home-a-doggy-paradise/?service_type=overnight-boarding&frequency=onetime&pet_type=dog&location=Vimy%20Road%2C%20Birmingham%20B13%200UA%2C%20UK&location_type=zip-code&dog_count=0&cat_count=0&puppy_count=0" target="_blank" rel="noopener noreferrer">
             <img src="images/rover logo.png" alt="Rover" style="height: 30px; vertical-align: middle; margin: 0 15px;">
         </a>
+        <a href="https://www.instagram.com/ohrahrah_petservices/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram" style="font-size: 30px; color: white; vertical-align: middle; margin: 0 15px;"></i>
+        </a>
     </div>
-    <p style="margin: 0;">© 2024 OhRahRah Pet Care Services. All Rights Reserved.</p>
-    <div style="margin-top: 10px;">
-        <a href="https://www.instagram.com/ohrahrah_petservices/" style="color: white; margin: 0 10px;" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@ohrahrah.pet.serv" style="color: white; margin: 0 10px;" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/people/Ohrahrah-Pet-Services/61562546376801/" style="color: white; margin: 0 10px;" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    </div>
+    <p style="margin: 0;">© 2025 OhRahRah Pet Care Services. All Rights Reserved.</p>
 </footer>
 <script src="script.js"></script>
 </body>
